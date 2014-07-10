@@ -1,4 +1,19 @@
 sdl2-info
 =========
 
-SDL2 Info tool
+A tool to spout out system information provided by the SDL2 library
+
+Requires
+--------
+
+* SDL2
+
+Build
+-----
+
+> make
+
+Run
+---
+
+> make run

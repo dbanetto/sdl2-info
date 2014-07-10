@@ -3,22 +3,25 @@ CFLAG:=-Wall
 CLIB:=-lSDL2
 INCULDE:=
 
-SRC:=main.c
-OBJ:=$(SRC:.c=.o)
-
+SRCDIR:=src
+OBJDIR:=obj
+SRC:=$(shell find $(SRCDIR) -type f -name '*.c')
+OBJ:=$(patsubst $(SRCDIR)/%.c,$(OBJDIR)/%.o,$(SRC))
 EXE:=sdl2-info
-
 all: $(SRC) $(EXE)
 
 run:
 	./$(EXE)
-	
+
 $(EXE) : $(OBJ)
 	$(CC) $(CFLAG) $(CLIB) $(OBJ) -o $(EXE)
 
-$(OBJ) : $(SRC)
+$(OBJ) : $(SRC) dir
 	$(CC) $(CFLAG) $(INCLUDE) -c $< -o $@
 
+dir:
+	@mkdir -p $(OBJDIR)
+
 clean:
-	rm $(OBJ)
+	rm -rf $(OBJDIR)
 	rm $(EXE)
