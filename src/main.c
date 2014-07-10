@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <SDL2/SDL.h>
+#include "info.h"
 
 int main (int arg, char** args)
 {
@@ -11,6 +12,10 @@ int main (int arg, char** args)
 
 	printf("SDL2 Compiled with %d.%d.%d\n", complied.major, complied.minor, complied.patch);
 	printf("SDL2 Linked with %d.%d.%d\n", linked.major, linked.minor, linked.patch);
+
+	printCPUInfo();
+	printSysInfo();
+	printHints();
 
 	SDL_Quit();
 	return 0;

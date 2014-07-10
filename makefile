@@ -1,13 +1,14 @@
 CC:=gcc
-CFLAG:=-Wall
+CFLAG:=-Wall -std=c11
 CLIB:=-lSDL2
-INCULDE:=
+INCLUDE:=-Isrc
 
 SRCDIR:=src
 OBJDIR:=obj
-SRC:=$(shell find $(SRCDIR) -type f -name '*.c')
+SRC:=$(wildcard $(SRCDIR)/*.c)
 OBJ:=$(patsubst $(SRCDIR)/%.c,$(OBJDIR)/%.o,$(SRC))
 EXE:=sdl2-info
+
 all: $(SRC) $(EXE)
 
 run:
@@ -16,7 +17,7 @@ run:
 $(EXE) : $(OBJ)
 	$(CC) $(CFLAG) $(CLIB) $(OBJ) -o $(EXE)
 
-$(OBJ) : $(SRC) dir
+$(OBJDIR)/%.o : $(SRCDIR)/%.c | dir
 	$(CC) $(CFLAG) $(INCLUDE) -c $< -o $@
 
 dir:
