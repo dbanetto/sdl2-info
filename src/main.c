@@ -10,11 +10,13 @@ int main (int arg, char** args)
 	SDL_VERSION(&complied);
 	SDL_GetVersion(&linked);
 
-	printf("SDL2 Compiled with %d.%d.%d\n", complied.major, complied.minor, complied.patch);
-	printf("SDL2 Linked with %d.%d.%d\n", linked.major, linked.minor, linked.patch);
+	printf("Compiled with SDL2 version : %d.%d.%d\n", complied.major, complied.minor, complied.patch);
+	printf("Running with SDL2 version : %d.%d.%d\n", linked.major, linked.minor, linked.patch);
 
-	printCPUInfo();
+
 	printSysInfo();
+	printCPUInfo();
+	printBatteryInfo();
 	printHints();
 
 	SDL_Quit();

@@ -12,4 +12,6 @@ void printSysInfo();
 
 void printHints();
 
+void printBatteryInfo();
+
 #endif
