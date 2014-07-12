@@ -11,9 +11,23 @@ Requires
 Build
 -----
 
-> make
+`` make
 
 Run
 ---
 
-> make run
+`` make run
+
+Arguments
+---------
+
+```
+	-s, --system    Prints basic system info
+	-c, --cpu       Prints CPU feature list
+	-b, --battery   Prints basic battery info
+	-h, --hints     Prints SDL2 hint list with values
+	-d, --display   Prints monitor's display info
+	-j, --joystick  Prints joystick/controller(s) info
+	-a, --audio     Prints audio info
+
+```
