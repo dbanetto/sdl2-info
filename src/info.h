@@ -14,4 +14,12 @@ void printHints();
 
 void printBatteryInfo();
 
+void printDisplayInfo();
+
+void printVideoInfo();
+
+void printJoyStickInfo();
+
+void printAudioInfo();
+
 #endif

@@ -18,6 +18,10 @@ int main (int arg, char** args)
 	printCPUInfo();
 	printBatteryInfo();
 	printHints();
+	printDisplayInfo();
+	printVideoInfo();
+	printJoyStickInfo();
+	printAudioInfo();
 
 	SDL_Quit();
 	return 0;
