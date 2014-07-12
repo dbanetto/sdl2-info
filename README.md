@@ -1,4 +1,4 @@
-sdl2-info
+SDL2 Info
 =========
 
 A tool to spout out system information provided by the SDL2 library
@@ -11,12 +11,12 @@ Requires
 Build
 -----
 
-`` make
+`make`
 
 Run
 ---
 
-`` make run
+`make run`
 
 Arguments
 ---------
